@@ -141,6 +141,9 @@ function _pkg_get_alias {
   php8.3)
     echo "php83"
     ;;
+  php8.4)
+    echo "php84"
+    ;;
   *)
     echo "$name"
     ;;

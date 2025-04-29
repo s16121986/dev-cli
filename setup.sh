@@ -175,8 +175,4 @@ fi
 echo -e "Настрока дополнительных переменных: nano $tool_path/.env"
 "$bin_command" --configure || exit 1
 
-## Run installation
-echo ""
-echo -e "Установка необходимых сервисов"
-"$bin_command" --install postgresql || exit 1
-"$bin_command" --install docker || exit 1
+echo -e "${GREEN}dev-cli installed!$NC"

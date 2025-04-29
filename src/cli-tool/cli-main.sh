@@ -15,7 +15,7 @@ function cli::configure {
   # shellcheck disable=SC2046
   export $(grep -v '^#' "$CLI_TOOL_PATH/.env" | xargs)
 
-  _setup_project_dir
+  _setup_projects_dir
 
   io::success "Configuration completed!"
 }
@@ -87,7 +87,7 @@ cli::main() {
   exit 0
 }
 
-function _setup_project_dir {
+function _setup_projects_dir {
   ## Setup www dir
   [ -d "/var/www" ] || sudo mkdir -p "/var/www"
   sudo chown "$UID":"$GID" "/var/www"

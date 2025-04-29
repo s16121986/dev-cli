@@ -6,7 +6,9 @@
 
 ```shell
 sudo apt -y install wget
+```
 
+```shell
 wget -qO- https://github.com/s16121986/dev-cli/raw/refs/heads/main/setup.sh | bash
 ```
 
