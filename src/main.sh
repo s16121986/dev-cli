@@ -7,6 +7,7 @@ pkg_include_path="$script_dir"
 pkg_packages_path="$pkg_include_path/package"
 pkg_packages=(php nginx composer redis postgresql supervisor rabbitmq volta docker mysql memcached)
 
+source "$script_dir/support/php.sh"
 for file in "$pkg_packages_path"/*.sh; do
   # shellcheck disable=SC1090
   source "$file"

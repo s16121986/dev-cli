@@ -5,13 +5,13 @@ function _dev_cli {
   local words=""
   case "${cmd}" in
   dev-cli)
-    words="list clone remove up down --install --remove --update --config"
+    words="--install --remove --update --config"
     ;;
   clone | up | down | remove)
     words=$(find /usr/local/lib/dev-cli/projects -mindepth 1 -maxdepth 1 -type d -printf '%f ')
     ;;
   --install | --remove)
-    words="composer docker git memcached mysql nginx php php8.3 postgres redis supervisor volta"
+    words="composer docker git memcached mysql nginx php php8.3 php8.4 postgres redis supervisor volta"
     ;;
   *) ;;
 

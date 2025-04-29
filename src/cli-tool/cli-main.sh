@@ -35,18 +35,6 @@ function cli::usage {
   io::line "  $CLI_ALIAS [options] [arguments]"
   echo ""
 
-  io::title "Available commands:"
-  io::dotted_line "  list" "List available commands"
-  io::dotted_line "  clone" "Clone and install projects from gitlab"
-  io::dotted_line "  remove" "Uninstall project"
-  io::dotted_line "  up" "Up all projects (for docker mode)"
-  io::dotted_line "  down" "Down all projects (for docker mode)"
-  echo ""
-
-  io::title "Development commands:"
-  io::dotted_line "  make:supplier" "Makes supplier package structure"
-  echo ""
-
   io::title "Service commands:"
   io::dotted_line "  --install" "Run package installer"
   io::dotted_line "  --remove" "Remove installed packages"
