@@ -22,3 +22,14 @@ function _dev_cli {
 }
 
 complete -F _dev_cli dev-cli
+
+# Add nginx conf autocomplete
+function _nginxconf()
+{
+	COMP_WORDBREAKS=${COMP_WORDBREAKS//:}
+	COMMANDS=`ls /etc/nginx/sites-available`
+	COMPREPLY=(`compgen -W "$COMMANDS" -- "${COMP_WORDS[COMP_CWORD]}"`)
+	return 0
+}
+complete -F _nginxconf nginxenconf
+complete -F _nginxconf nginxdisconf
