@@ -34,8 +34,8 @@ alias gp="git pull"
 
 # nav
 alias .www="cd /var/www"
+alias .vhosts="cd /var/www/vhosts"
 alias .logs="cd ./storage/logs"
-alias .oex="cd /var/www/vhosts/online-express.ru"
 
 # Add artisan autocomplete
 function _artisan()
