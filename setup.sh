@@ -121,6 +121,10 @@ EOT
     cp "$tool_path/config/wsl/.bash_aliases" "$HOME/.bash_aliases"
   fi
 
+  tee -a "$HOME/.profile" >/dev/null <<EOT
+export PATH="$tool_path/bin:$PATH"
+EOT
+
   log_success "WSL configuration"
 }
 

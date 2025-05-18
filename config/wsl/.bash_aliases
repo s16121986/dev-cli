@@ -26,6 +26,12 @@ alias nb="npm run build"
 alias nu="npm update && npx browserslist@latest --update-db"
 alias ni="npm install && npx browserslist@latest --update-db"
 
+# git
+alias gs="git status"
+alias gf="git fetch"
+alias gr="git reset --hard && git clean -df"
+alias gp="git pull"
+
 # nav
 alias .www="cd /var/www"
 alias .logs="cd ./storage/logs"

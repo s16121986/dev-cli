@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+N="${1}"
+
+if [ -f "/etc/nginx/sites-enabled/${N}" ]; then
+  rm "/etc/nginx/sites-enabled/${N}"
+  sudo service nginx restart
+  echo "${N} disabled"
+else
+  echo "${N} already disabled"
+fi

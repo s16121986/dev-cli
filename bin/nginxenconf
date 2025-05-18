@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+N="${1}"
+
+if [ -f "/etc/nginx/sites-enabled/${N}" ]; then
+  echo "${N} already enabled"
+elif [ -f "/etc/nginx/sites-available/${N}" ]; then
+  sudo ln -s "/etc/nginx/sites-available/${N}" "/etc/nginx/sites-enabled/${N}"
+  sudo service nginx restart
+  echo "${N} enabled"
+else
+  echo "${N} not found"
+ fi
