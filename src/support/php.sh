@@ -5,7 +5,7 @@ install_php() {
 
   _init_php_repository
 
-  local extensions=(common cli xdebug pgsql mysqlnd redis memcached opcache bcmath mcrypt zip xml curl mbstring gd soap yaml fpm)
+  local extensions=(common cli pgsql mysqlnd redis memcached opcache bcmath mcrypt zip xml curl mbstring gd soap yaml fpm apcu xdebug xhprof)
   for i in "${extensions[@]}"; do
     sudo apt -yqq install "${phpKey}-${i}"
   done

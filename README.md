@@ -21,7 +21,7 @@ dev-cli --install -h
 ## Добавление хостов в систему
 
 ```shell
-127.0.0.1	example.online-express.local
+127.0.0.1	example.project.local
 ```
 
 - Windows - Edit `C:\Windows\system32\drivers\etc\hosts` file
