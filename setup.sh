@@ -5,7 +5,7 @@ set -e
 git_branch=main
 install_path="/usr/local/lib"
 bin_command="dev-cli"
-tool_url="git@github.com:s16121986/dev-cli.git"
+tool_url="https://github.com/s16121986/dev-cli.git"
 tool_name="dev-cli"
 tool_path="$install_path/$tool_name"
 gid="$(id -g)"
